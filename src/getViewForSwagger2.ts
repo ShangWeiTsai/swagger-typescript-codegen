@@ -173,7 +173,7 @@ const makeMethodsFromPaths = (
         if (swagger.securityDefinitions) {
           for (const sk in swagger.securityDefinitions) {
             if (mergedSecurity.join(",").indexOf(sk) !== -1) {
-              secureTypes.push(swagger.securityDefinitions[sk].type);
+              secureTypes.push(swagger.securityDefinitions[sk].type as never);
             }
           }
         }

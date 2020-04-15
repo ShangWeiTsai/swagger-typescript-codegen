@@ -22,4 +22,13 @@ export interface CodeGenerator {
    * @returns {string}
    */
   getCode(opts: CodeGenOptions): string;
+
+  /**
+   * Transfrom the code via Gtx Compiler and the provided options.
+   *
+   * @param {CodeGenOptions} opts
+   * @returns {string}
+   * @memberof CodeGenerator
+   */
+  getCodeFromGtxtpl(opts: CodeGenOptions): string;
 }

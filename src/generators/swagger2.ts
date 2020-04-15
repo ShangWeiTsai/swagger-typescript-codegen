@@ -18,5 +18,9 @@ export const Swagger2Gen: CodeGenerator = {
   getCode: opts => {
     const data = Swagger2Gen.getViewData(opts);
     return transformToCodeWithMustache(data, opts.template, opts.mustache);
+  },
+  getCodeFromGtxtpl: opts => {
+    const data = Swagger2Gen.getViewData(opts);
+    return "";
   }
 };
